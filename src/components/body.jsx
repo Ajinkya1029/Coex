@@ -3,7 +3,7 @@ import NavBar from "./navbar";
 import Work from "./work";
 import Meet from "./meet";
 import Contact from "./contact";
-import bgimg from "./resources/backgroundimage.png"
+import bgimg from "../resources/backgroundimage.png";
 function Body(){
 return <div >
     <img src={bgimg} className="bgimg" ></img>

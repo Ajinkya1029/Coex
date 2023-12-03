@@ -1,5 +1,5 @@
 import React from "react";
-import htw from "./resources/htw.png"
+import htw from "../resources/htw.png"
 function Work(){
     return <div className="work">
         <h1>

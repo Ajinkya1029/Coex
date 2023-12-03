@@ -1,5 +1,5 @@
 import React from "react";
-import CoexLogo from './resources/coex-logo (1).png';
+import CoexLogo from '../resources/coex-logo (1).png';
  
 function NavBar(){
     

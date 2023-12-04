@@ -1,11 +1,13 @@
 import React from "react";
 import logo from '../resources/contact-logo.png';
+import style from './style.module.css'
+
 function Contact(){
-    return <div className="contact">
-<div className="left-con">
+    return <div className={style.contact}>
+<div className={style.leftcon}>
 <img src={logo}></img>
 </div>
-<div className="right-con">
+<div className={style.rightcon}>
     <h4>Services</h4>
     <h4>Support</h4>
     <h4>Contact Us</h4>

@@ -1,7 +1,9 @@
 import React from "react";
+import style from './style.module.css'
+
 import htw from "../resources/htw.png"
 function Work(){
-    return <div className="work">
+    return <div className={style.work}>
         <h1>
     How Things Work
         </h1>

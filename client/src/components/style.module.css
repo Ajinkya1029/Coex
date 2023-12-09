@@ -81,6 +81,11 @@ text-align: center;
     justify-self: center;
 }
 .caroimg{
-   
-    display:none;
+   overflow: hidden;
+    display: flex;
+    /* gap: 10%; */
+}
+.image{
+    height: 400px;
+    width: 500px;
 }

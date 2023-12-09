@@ -8,7 +8,22 @@ function Login(){
 
     function submit(event){
 event.preventDefault();
-axios.post('http://localhost:1000/login',{id,password}).then(result=>console.log(result)).catch(err=>console.log(err));
+// axios.post('http://localhost:1000/login',{id,password}).then(result=>console.log(result)).catch(err=>console.log(err));
+fetch("http://localhost:1000/login",{
+   method:"POST",
+crossDomain:true,
+headers:{
+    "Content-Type":"application/json",
+    Accept:"application/json",
+    "Access-Control-Allow-origin":"*",
+},
+body:JSON.stringify({
+    id,
+    password,
+})
+}).then((res)=>res.json()).then((data)=>{
+    console.log(data,"UserRegistered");
+});
     }
     
     return  <div className={styles.Body}>

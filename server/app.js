@@ -15,7 +15,7 @@ const employeeScheme= new mongoose.Schema({
     password:String
 });
 const EmployeeModel=mongoose.model("employees",employeeScheme);
-app.post("/login",async(req,res)=>{
+app.post("/register",async(req,res)=>{
     const{id,password}=req.body;
 try{
     await EmployeeModel.create({
@@ -26,6 +26,25 @@ password,
 }catch(err){
     res.send(err);
 }
+})
+app.post("/login",async(req,res)=>{
+    const {id,password}=req.body;
+    try{
+        await EmployeeModel.findOne({id:id}).then(employee=>{
+            if(employee){
+                if(employee.password==password){
+                    console.log("success");
+                    res.send({status:"ok"});
+                }else{
+                    console.log("wrong password");
+                }
+            }else{
+                console.log("no registered user");
+            }
+        })
+    }catch(err){
+        res.send(err);
+    }
 })
 
 app.listen(port,(req,res)=>{

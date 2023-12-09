@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router";
+// import axios from "axios";
 import styles from "../components/login.module.css"
 function Login(){
     const [id,setId]=useState("");
     const [password,setPassword]=useState("");
+    const navigate=useNavigate("");
 
     function submit(event){
 event.preventDefault();
@@ -23,7 +25,7 @@ body:JSON.stringify({
 })
 }).then((res)=>res.json()).then((data)=>{
     console.log(data,"UserRegistered");
-});
+}).then(navigate("/"));
     }
     
     return  <div className={styles.Body}>

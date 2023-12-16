@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from "react";
 import CoexLogo from '../resources/coex-logo (1).png';
 import style from './style.module.css'
@@ -10,11 +11,9 @@ function NavBar(){
         </div>
         <div className={style.rightnav}>
 
-    <h4>Services</h4>
-    <h4>Support</h4>
-    <h4>Login</h4>
-    <h4>or</h4>
-    <h4>SignUp</h4>
+    <Link to="/services" className={style.nt}>Services</Link>
+    <Link to="/support" className={style.nt}>Support</Link>
+    <Link to="/login" className={style.nt}>Login</Link>
 
         </div>
     </div>

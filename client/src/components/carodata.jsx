@@ -10,32 +10,52 @@ const slides=[
     {
     id:"1",
     src: ajinkyaImage,
-    alt:"ajinkya"
+    alt:"ajinkya",
+    name:"Ajinkya",
+    coursename:"B.Tech CSE",
+    year:"2021-2025"
+
     },
     {
         id:"2",
         src:taran,
-        alt:"taran"
+        alt:"taran",
+        name:"Taran",
+        coursename:"B.Tech CSE",
+        year:"2021-2025"
     },
     {
         id:"3",
         src:taher,
-        alt:"taher"
+        alt:"taher",
+        name:"Taher",
+        coursename:"B.Tech CSE",
+        year:"2021-2025"
+
     },
     { 
         id:"4",
         src:aryaa,
-        alt:"aryaa"
+        alt:"aryaa",
+        name:"Aryaa",
+        coursename:"B.Tech CSE",
+        year:"2021-2025"
     },
     { 
         id:"5",
         src:soham,
-        alt:"soham"
+        alt:"soham",
+        name:"Soham",
+        coursename:"B.Tech CSE",
+        year:"2021-2025"
     },
     { 
         id:"6",
         src:tejas,
-        alt:"tejas"
+        alt:"tejas",
+        name:"Tejas",
+        coursename:"B.Tech CSE",
+        year:"2021-2025"
     }
 ];
 export default slides;

@@ -83,11 +83,11 @@ text-align: center;
 .caroimg{
    overflow: hidden;
     display: flex;
-    /* gap: 10%; */
+    
 }
 .image{
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 350px;
 }
 .nt{
     color: black;
@@ -104,3 +104,36 @@ text-align: center;
 .ct:hover{
     text-decoration: underline;
 }
+
+
+.card {
+    text-align: center;
+    border: 2px solid rgba(2, 2, 2, 0.676);
+  }
+  
+  .image {
+   
+    border-radius: 30%;
+    margin-bottom: 8px; /* Spacing between image and name */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .name {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .coursename {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .year{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .arrowright{
+    size: 50%;
+  }
+  

@@ -1,0 +1,25 @@
+/* ServiceTable.module.css */
+
+.card {
+  border: 1px solid #ddd; /* border color */
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow for elevation effect */
+  background-color: #fff; /* card background color */
+}
+
+.serviceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.serviceTable th,
+.serviceTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* horizontal line between rows */
+}
+
+.serviceTable th {
+  background-color: #f4f4f4; /* header background color */
+}

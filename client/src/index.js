@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Home from './pages/home';
 import Login from './pages/login';
 import ContactUsPage from './pages/contactus';
+import ServiceTable from './pages/servicetable';
 
 import {
     createBrowserRouter,
@@ -22,6 +23,10 @@ const router=createBrowserRouter([
     {
         path:"contactus",
         element:<ContactUsPage/>
+    },
+    {
+        path:"service",
+        element:<ServiceTable/>
     }
 ])
 

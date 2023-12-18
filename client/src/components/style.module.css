@@ -49,6 +49,7 @@
     align-items: center;
   
     .sep{
+        font-size: 1.4em;
       display: flex;
       justify-content: space-between;
       margin-right: 200px; 

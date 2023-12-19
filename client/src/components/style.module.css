@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
 }
-.navbar{
+/* .navbar{
   display: flex; 
   gap: 50%;   
   list-style: none;
@@ -24,16 +24,75 @@
 }
 #coexlogo{
     position: relative;
+    height: 90px; */
+/* } */
+.NavbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.7);
+    color: white;
+    list-style: none;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 9999; 
+    width: 100%; 
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+  .RightNav {
+    display: flex;
+    gap: 50px;
+    justify-content: auto;
+    align-items: center;
+  
+    .sep{
+        font-size: 1.4em;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 200px; 
+    }
+  } 
+  
+  .RightNav h4 {
+    margin: 25px;
+    font: 1.6em "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      transition-delay: 150ms;
+      text-decoration: underline;
+      color: yellow;
+    }
+  }
+  
+  .LeftNav{
+    img {
+      width: 155px;
+      height: auto;
+      display: grid;
+      place-items: center;
+      margin:40px;
+    }
+  }
+  
+  #coexlogo {
+    position: relative;
     height: 90px;
-}
+  }
+  
 .work{
 position: relative;
-top: 660px;
+top: 800px;
 text-align: center;
 }
 .meet{
+    height: 600px;
+    margin: 0;
     position: relative;
-    top: 750px;
+    top: 850px;
     text-align: center;
 }
 .contact{
@@ -83,9 +142,57 @@ text-align: center;
 .caroimg{
    overflow: hidden;
     display: flex;
-    /* gap: 10%; */
+    
 }
 .image{
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 350px;
 }
+.nt{
+    color: black;
+    text-decoration: none;
+}
+.nt:hover{
+    text-decoration: underline;
+}
+
+.ct{
+    color: black;
+    text-decoration: none;
+}
+.ct:hover{
+    text-decoration: underline;
+}
+
+
+.card {
+    text-align: center;
+    border: 2px solid rgba(2, 2, 2, 0.676);
+  }
+  
+  .image {
+   
+    border-radius: 30%;
+    margin-bottom: 8px; /* Spacing between image and name */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .name {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .coursename {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  .year{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .arrowright{
+    size: 50%;
+  }
+  

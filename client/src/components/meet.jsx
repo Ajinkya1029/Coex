@@ -12,7 +12,7 @@ function Meet() {
     return () => {
       clearInterval(slideTimer);
     };
-  }, []); 
+  }, []);
 
   let slideTimer;
 

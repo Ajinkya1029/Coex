@@ -27,6 +27,31 @@ password,
     res.send(err);
 }
 })
+app.get("/service",async(req,res)=>{
+    var myJson = {'mineId':'123', 'clusterId':'909','mineName':'hawra','nearMine':'gokhra'};
+    var slides=[
+        {
+        id:"1",
+        // src: ajinkyaImage,
+        alt:"ajinkya",
+        name:"Ajinkya",
+        
+    
+        },
+        {
+            'id':"2",
+            // 'src'=taran,
+            'alt':"taran",
+            'name':"Taran",
+            
+        }
+    ];
+    try{
+    await res.send(slides);
+    }catch(err){
+        res.send(err);
+    }
+})
 app.post("/login",async(req,res)=>{
     const {id,password}=req.body;
     try{

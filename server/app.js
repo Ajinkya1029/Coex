@@ -32,17 +32,23 @@ app.get("/service",async(req,res)=>{
     var slides=[
         {
         id:"1",
-        // src: ajinkyaImage,
-        alt:"ajinkya",
-        name:"Ajinkya",
+        mineSender:"chapapur",
+        senderName:"Ajinkya",
+        clusterId:"123",
+        clusterName:"ecl",
+        priority:"2",
+        expectedIn:"12"
         
     
         },
         {
-            'id':"2",
-            // 'src'=taran,
-            'alt':"taran",
-            'name':"Taran",
+        id:"2",
+        mineSender:"chapapur",
+        senderName:"Ajinkya",
+        clusterId:"123",
+        clusterName:"ecl",
+        priority:"2",
+        expectedIn:"12"
             
         }
     ];

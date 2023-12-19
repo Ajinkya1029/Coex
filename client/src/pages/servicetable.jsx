@@ -1,6 +1,8 @@
-import styles from "../components/service.module.css";
-import UserData from "../components/userData";
+// import styles from "../components/service.module.css";
+// import UserData from "../components/userData";
 import React, { useEffect, useState } from "react";
+import NavBar from "../components/navbar";
+import styles from "../components/service.module.css"
 const API = "http://localhost:1000/service";
 
 
@@ -28,15 +30,18 @@ const ServiceTable = () => {
     },[])
 
     return (
-      <div className="container">
+      <div>
+<NavBar></NavBar>
+      <div className={styles.container}>
       <table>
         <thead>
           <tr>
-            <th>Requester mine</th>
-            <th>cluster name</th>
-            <th>Distance</th>
+            <th>Mine sender</th>
+            <th>Sender Name</th>
+            <th>Cluster Id</th>
+            <th>Cluster Name</th>
             <th>Priority</th>
-            <th>expected in</th>
+            <th>Expected In</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -44,17 +49,19 @@ const ServiceTable = () => {
           {/* Use parentheses instead of curly braces for the map function */}
           {users.map((user, index) => (
             <tr key={index}>
-              {/* <td>{user.RequesterMine}</td>
-              <td>{user.ClusterName}</td>
-              <td>{user.Distance}</td> Assuming Distance is a property of the user object */}
-              <td>{user.alt}</td> {/* Assuming Priority is a property of the user object */}
-              <td>{user.name}</td> {/* Assuming ExpectedIn is a property of the user object */}
+               <td>{user.mineSender}</td>
+              <td>{user.senderName}</td>
+            <td>{user.clusterId}</td> 
+            <td>{user.clusterName}</td>
+              <td>{user.priority}</td> {/* Assuming Priority is a property of the user object */}
+              <td>{user.expectedIn}</td> {/* Assuming ExpectedIn is a property of the user object */}
               <td>Action</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+          </div>
       );
     };
 export default ServiceTable;

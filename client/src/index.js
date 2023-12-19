@@ -5,7 +5,8 @@ import Login from './pages/login';
 import ContactUsPage from './pages/contactus';
 import ServiceTable from './pages/servicetable';
 import AllSiding from './pages/allsiding';
-
+import MinningCard from './pages/MinningCard';
+import BarGraph from './pages/graph';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -32,7 +33,15 @@ const router=createBrowserRouter([
     {
         path:"allsiding",
         element:<AllSiding/>
-    }
+    },
+    {
+        path:"minningcard",
+        element:<MinningCard/>
+    },
+    // {
+    //     path:"graph",
+    //     element:<BarGraph/>
+    // }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('homepage'));

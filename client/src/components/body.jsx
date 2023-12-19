@@ -7,7 +7,7 @@ import bgimg from "../resources/train.jpeg.jpg";
 import style from './style.module.css';
 import carodata from "./carodata";
 import emblem from "../resources/Ministry.png";
-
+import MinningCard from "../pages/MinningCard"
 function Body() {
     return <div >
         <img src={bgimg} className={style.bgimg} ></img>

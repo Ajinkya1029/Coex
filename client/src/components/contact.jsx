@@ -11,7 +11,7 @@ function Contact(){
 </div>
 <div className={style.rightcon}>
     <Link to="/services" className={style.ct}>Services</Link>
-    <Link to="/support" className={style.ct}>Support</Link>
+    <Link to="/MinningCard" className={style.ct}>Support</Link>
     <Link to="/contactus" className={style.ct}>contact us</Link>
    
 </div>

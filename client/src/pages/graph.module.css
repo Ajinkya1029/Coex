@@ -1,0 +1,14 @@
+.graphcontainer {
+    max-width: 500px;
+    margin-top: 20px ;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(178, 190, 9, 0.1);
+    marging-left: 80px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }

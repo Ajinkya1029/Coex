@@ -39,7 +39,7 @@ const ServiceTable = () => {
       },
       body: JSON.stringify({
         reqid: "3",
-        userId: userId, // Include the user ID in the request body
+        
       }),
     }).then((res) => {
       res.json().then((data) => {

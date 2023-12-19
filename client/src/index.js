@@ -4,6 +4,7 @@ import Home from './pages/home';
 import Login from './pages/login';
 import ContactUsPage from './pages/contactus';
 import ServiceTable from './pages/servicetable';
+import AllSiding from './pages/allsiding';
 
 import {
     createBrowserRouter,
@@ -27,6 +28,10 @@ const router=createBrowserRouter([
     {
         path:"services",
         element:<ServiceTable/>
+    },
+    {
+        path:"allsiding",
+        element:<AllSiding/>
     }
 ])
 

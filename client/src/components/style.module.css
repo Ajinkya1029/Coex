@@ -241,3 +241,11 @@
   opacity: 0.9;
   height: 70px;
 }
+.search{
+ padding-top: 5.5%;
+ width: 60%;
+ margin-left: 15%;
+}
+.searchbox{
+  display: flex;
+}

@@ -6,7 +6,8 @@ const app=express();
 const port=1000;
 
 
-app.use((cors()));
+ app.use((cors()));
+  
 app.use(express.json());
 mongoose.connect('mongodb://127.0.0.1:27017/sih');
 
@@ -27,7 +28,7 @@ password,
     res.send(err);
 }
 })
-app.get("/service",async(req,res)=>{
+app.get("/services",async(req,res)=>{
     var myJson = {'mineId':'123', 'clusterId':'909','mineName':'hawra','nearMine':'gokhra'};
     var slides=[
         {
@@ -57,6 +58,10 @@ app.get("/service",async(req,res)=>{
     }catch(err){
         res.send(err);
     }
+})
+app.post("/service",async(req,res)=>{
+const ans=await req.body;
+console.log(ans);
 })
 app.post("/login",async(req,res)=>{
     const {id,password}=req.body;

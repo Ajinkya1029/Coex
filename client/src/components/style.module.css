@@ -228,7 +228,22 @@
   position: absolute;
   left: 4%;
   top: 42%;
+  font-size: 18px;
 
+  border-radius: 5%;
+  background-color: #c1c1c1;
+  box-shadow: 20px 20px 60px #00000041, -20px -20px 60px #ffffff40;
+}
+.box1{
+  background-color: #000;
+  opacity: 0.9;
+  height: 340px;
+  width: 690px;
+  position: absolute;
+  left: 4%;
+  top: 42%;
+  font-size: 18px;
+  padding: 10px;
   border-radius: 5%;
   background-color: #c1c1c1;
   box-shadow: 20px 20px 60px #00000041, -20px -20px 60px #ffffff40;

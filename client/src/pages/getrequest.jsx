@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import styles from "../components/getrequest.module.css";
+import NavBar from "../components/navbar";
 const url = "https://localhost:7278/api/Requests/GetAll";
 
 function GetRequests() {
+
   const [users, setUsers] = useState([]);
 //   const [data, setData] = useState([]);
   const [ur, setUrl] = useState("");
   const navigate = useNavigate();
+  
 
   function fetchData(url) {
     const token = localStorage.getItem('token');
@@ -33,12 +36,15 @@ function GetRequests() {
   }, []);
 
   function test(event, id) {
-    const encodedValue = `api/Sidings/GetById?id=${encodeURIComponent(id)}`;
+    
+    const encodedValue = `api/Requests/GetById?id==${encodeURIComponent(id)}`;
     setUrl(encodedValue);
-    navigate("/miningcard?id=" + String(id));
+    navigate("/updatereq?id=" + String(id));
   }
 
   return (
+    <div>
+<NavBar></NavBar>
     <div className={styles.map}>
       <h2>Request Page</h2>
       <table className={styles.sidingdata}>
@@ -72,6 +78,7 @@ function GetRequests() {
         </tbody>
       </table>
     </div>
+          </div>
   );}
 
 export default GetRequests;

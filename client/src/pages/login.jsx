@@ -68,7 +68,7 @@ function Login() {
           </button>
           <div className={styles.registerlink}>
             <p>
-              Don't have an account <a href="#">Register</a>
+              Don't have an account <a href="/signup">Register</a>
             </p>
           </div>
         </form>

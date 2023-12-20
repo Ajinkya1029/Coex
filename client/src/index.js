@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import Home from './pages/home';
 import Login from './pages/login';
 import ContactUsPage from './pages/contactus';
-import ServiceTable from './pages/servicetable';
 import AllSiding from './pages/allsiding';
 import MiningCard from './pages/miningcard';
 import SignUp from './pages/signup';
 import Request from './pages/request';
 import GetRequests from './pages/getrequest';
+import CoalRequestHandler from './pages/coalrequesthandler';
+import Notifications from './pages/notification';
+import UpdateReq from './pages/updaterequest';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -30,10 +32,6 @@ const router=createBrowserRouter([
         element:<ContactUsPage/>
     },
     {
-        path:"servicestable",
-        element:<ServiceTable/>
-    },
-    {
         path:"allsiding",
         element:<AllSiding/>
     },
@@ -52,6 +50,16 @@ const router=createBrowserRouter([
 
         path:"getrequest",
         element:<GetRequests></GetRequests>
+    },{
+        path:"coalstatus",
+        element:<CoalRequestHandler/>
+    },{
+        path:"notification",
+        element:<Notifications></Notifications>
+    },
+    {
+        path:"updatereq",
+        element:<UpdateReq></UpdateReq>
     }
 ])
 

@@ -13,8 +13,8 @@ function NavBar() {
             <div className={styles.RightNav}>
                 <div className={styles.sep}>
                     <Link to="/allsiding" className={styles.nt} >Siding List</Link>
-                    <Link to="/servicestable" className={styles.nt} >Service </Link>
-                    <Link to="/support" className={styles.nt}>Support</Link>
+                    <Link to="/getrequest" className={styles.nt} >Service </Link>
+                    <Link to="/req" className={styles.nt}>Request</Link>
                     <Link to="/login" className={styles.nt}>Login</Link>
                 </div>
 

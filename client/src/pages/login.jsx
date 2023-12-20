@@ -13,6 +13,8 @@ function Login() {
 
  function submit(event){
     event.preventDefault();
+    // var data = new FormData();
+    // data.append("sidingId",sidingId);
     fetch('https://localhost:7278/api/Users/loginSiding', {
         method: 'POST',
         body: JSON.stringify({sidingId,userName, password}),
@@ -24,7 +26,7 @@ function Login() {
        if(data.success){ 
       const token = data.token;
       
-      localStorage.setItem('token', token);
+      localStorage.setItem('token',"Bearer "+ token);
       navigate("/");
 
        }else{

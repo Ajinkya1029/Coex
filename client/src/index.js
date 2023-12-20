@@ -7,13 +7,15 @@ import ServiceTable from './pages/servicetable';
 import AllSiding from './pages/allsiding';
 import MiningCard from './pages/miningcard';
 import SignUp from './pages/signup';
-import Request from './request/request';
+import Request from './pages/request';
+import GetRequests from './pages/getrequest';
 import {
     createBrowserRouter,
     RouterProvider,
     Route,
     Link,
   } from "react-router-dom";
+
 const router=createBrowserRouter([
     {
     path:'/',
@@ -46,6 +48,10 @@ const router=createBrowserRouter([
     {
         path:"req",
         element:<Request/>
+    },{
+
+        path:"getrequest",
+        element:<GetRequests></GetRequests>
     }
 ])
 

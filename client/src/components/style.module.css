@@ -39,7 +39,7 @@
   font-size: 1.2em;
   display: flex;
   justify-content: space-arounda;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 .RightNav h4 {
@@ -236,9 +236,9 @@
 
 .ministryimg{
   position: absolute;
-  left: 49%;
-  top: 29%;
-  opacity: 0.9;
+  left: 44%;
+  top: 27%;
+  /* opacity: 0.9; */
   height: 70px;
 }
 .search{

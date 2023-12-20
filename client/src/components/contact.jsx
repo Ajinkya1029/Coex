@@ -10,7 +10,7 @@ function Contact(){
 <img src={logo}></img>
 </div>
 <div className={style.rightcon}>
-    <Link to="/services" className={style.ct}>Services</Link>
+    <Link to="/servicetable" className={style.ct}>Services</Link>
     <Link to="/support" className={style.ct}>Support</Link>
     <Link to="/contactus" className={style.ct}>contact us</Link>
    

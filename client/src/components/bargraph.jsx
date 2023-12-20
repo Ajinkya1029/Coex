@@ -22,7 +22,7 @@ function BarGraph () {
 
   return (
     <div className={styles.graphcontainer}>
-      <h2>Amount of Coal</h2>
+      <h2 className={styles.graphheading}>Amount of Coal</h2>
       <Chart options={options} series={series} type="bar" height={350} width={200} />
     </div>
   );

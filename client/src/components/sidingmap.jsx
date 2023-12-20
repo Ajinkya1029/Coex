@@ -7,9 +7,8 @@ const url = "https://localhost:7278/api/Sidings/GetAll";
 
 function SidingMap() {
   const [users, setUsers] = useState([]);
-  const [data,setData]=useState([]);
-  const [ur,setUrl]=useState("");
-  // const [selectedId, setSelectedId] = useState(null);
+  const [data, setData] = useState([]);
+  const [ur, setUrl] = useState("");
   const navigate = useNavigate();
 
   function fetchData(url) {
@@ -31,15 +30,13 @@ function SidingMap() {
 
   useEffect(() => {
     fetchData(url);
-    
   }, []);
 
   function test(event, id) {
     const encodedValue = `api/Sidings/GetById?id=${encodeURIComponent(id)}`;
     setUrl(encodedValue);
-    navigate("/miningcard?id="+String(id));
+    navigate("/miningcard?id=" + String(id));
   }
-
 
   return (
     <div className={styles.map}>
@@ -55,18 +52,15 @@ function SidingMap() {
         </thead>
         <tbody>
           {users.map((item, idx) => (
-            <div onClick={(event) => test(event, item.id)} key={idx}>
-              <tr>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.division}</td>
-                <td>{item.state}</td>
-              </tr>
-            </div>
+            <tr onClick={(event) => test(event, item.id)} key={idx}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.division}</td>
+              <td>{item.state}</td>
+            </tr>
           ))}
         </tbody>
       </table>
-      
     </div>
   );
 }

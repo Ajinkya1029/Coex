@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/navbar";
 import styles from "../components/service.module.css"
+import user from "./servicetabledata";
 const API = "http://localhost:1000/services";
 
 
@@ -8,21 +9,43 @@ const ServiceTable = () => {
   const [users, setUsers] = useState([]);
 
 
-  function fetchUser(url) {
-    fetch(url, {
-      method: "GET",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-origin": "*",
-      },
-    }).then((res) => res.json()).then((data) => {
-      setUsers(data);
+  // function fetchUser(url) {
+  //   fetch(url, {
+  //     method: "GET",
+  //     crossDomain: true,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //       "Access-Control-Allow-origin": "*",
+  //     },
+  //   }).then((res) => res.json()).then((data) => {
+  //     setUsers(data);
+  //     console.log(data);
+  //   })
+  // }
+  async function fetchUser(url) {
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-origin": "*",
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
       console.log(data);
-    })
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
   }
-
+  
   useEffect(() => {
     fetchUser(API);
   }, [])

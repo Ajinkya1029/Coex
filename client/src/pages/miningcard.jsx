@@ -35,15 +35,17 @@ function fetchUser(url) {
   }
     return <div>
         <NavBar></NavBar>
+        <h3 className={style.heading}>Siding Information</h3>
         <div className={style.container}>
-
+      
      <div className={style.miningcard}>
        <h2>{data.sidingName}</h2>
        <p>Zone: {data.zone}</p>
        <p>Station: {data.station}</p>
        <p>Division: {data.division}</p>
        <p>State: {data.state}</p>
-       <p>No. of Mines: {data.numberOfMines}</p>
+       <p>No. of Mines: {data.numMines}</p>
+       <p>Rakes Available: {data.availableRakes}</p>
      </div>
      <BarGraph />
    </div>

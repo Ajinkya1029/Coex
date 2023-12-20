@@ -5,6 +5,8 @@ import Login from './pages/login';
 import ContactUsPage from './pages/contactus';
 import ServiceTable from './pages/servicetable';
 import AllSiding from './pages/allsiding';
+import MiningCard from './pages/miningcard';
+import SignUp from './pages/signup';
 
 import {
     createBrowserRouter,
@@ -32,6 +34,14 @@ const router=createBrowserRouter([
     {
         path:"allsiding",
         element:<AllSiding/>
+    },
+    {
+        path:"miningcard",
+        element:<MiningCard/>,
+    },
+    {
+        path:"signup",
+        element:<SignUp></SignUp>
     }
 ])
 

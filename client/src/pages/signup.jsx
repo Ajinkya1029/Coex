@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import styles from "../components/login.module.css";
 
-function Login() {
+function SignUp() {
   const [userName, setId] = useState("");
   const [password, setPassword] = useState("");
   const [sidingId, setCluster] = useState("");
@@ -20,16 +20,7 @@ function Login() {
             'Content-Type': 'application/json'
         }
     }).then((res)=>res.json()).then((data)=>{
-      console.log(data);
-       if(data.success){ 
-      const token = data.token;
-      
-      localStorage.setItem('token', token);
-      navigate("/");
-
-       }else{
-        alert("wrong password");
-       }
+      console.log(data)
       
         
     })}
@@ -38,7 +29,7 @@ function Login() {
     <div className={styles.Body}>
       <div className={styles.wrapper}>
         <form onSubmit={submit}>
-          <h1>Login</h1>
+          <h1>Sign-Up</h1>
           <div className={styles.inputbox}>
             <input onChange={(e) => setCluster(e.target.value)} type="text" placeholder="Cluster Id" required />
             <i className="bx bxsuser"></i>
@@ -56,23 +47,16 @@ function Login() {
             <i className={styles.bxbxslockalt}></i>
           </div>
           <div className={styles.rememberforgot}>
-            <label>
-              <input type="checkbox" />Remember me
-            </label>
-            <a href="#">Forgot password?</a>
-          </div>
+           </div>
           <button type="submit" className="btn">
-            Login
+            Sign Up
           </button>
           <div className={styles.registerlink}>
-            <p>
-              Don't have an account <a href="#">Register</a>
-            </p>
+           
           </div>
         </form>
       </div>
     </div>
   );
 }
-
-export default Login;
+export default SignUp;

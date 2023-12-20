@@ -1,0 +1,46 @@
+.miningcard {
+    background-color: #ff9933; /* Dark yellow color */
+    border: 1px solid #ccc;
+    box-shadow: 2px  rgba(40, 56, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 130px;
+    width: 400px;
+    height:400px;
+    font-size: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+  }
+  
+ .miningcard h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+ .miningcard p {
+    margin: 5px 0;
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.graphcontainer {
+    
+    height: 400px;
+    width: 250px;
+    margin-top: 130px ;
+    padding: 20px;
+    /* border: 1px solid #000; */
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(178, 190, 9, 0.1); */
+
+  }
+  
+.h2 {
+    text-align: center;
+    color:#333;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}

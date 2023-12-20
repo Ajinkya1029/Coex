@@ -12,7 +12,7 @@ function NavBar() {
 
             <div className={styles.RightNav}>
                 <div className={styles.sep}>
-                    <Link to="/services" className={styles.nt} >Services</Link>
+                    <Link to="/allsiding" className={styles.nt} >Siding List</Link>
                     <Link to="/support" className={styles.nt}>Support</Link>
                     <Link to="/login" className={styles.nt}>Login</Link>
                 </div>

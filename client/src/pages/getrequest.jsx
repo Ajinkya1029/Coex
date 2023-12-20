@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import styles from "../components/getrequest.module.css";
-const url = "";
+const url = "https://localhost:7278/api/Requests/GetAll";
 
 function GetRequests() {
   const [users, setUsers] = useState([]);
-  const [data, setData] = useState([]);
+//   const [data, setData] = useState([]);
   const [ur, setUrl] = useState("");
   const navigate = useNavigate();
 
   function fetchData(url) {
+    const token = localStorage.getItem('token');
     fetch(url, {
       method: "GET",
       crossDomain: true,
@@ -17,6 +18,7 @@ function GetRequests() {
         "Content-Type": "application/json",
         Accept: "application/json",
         "Access-Control-Allow-origin": "*",
+        Authorization: `${token}`,
       },
     })
       .then((res) => res.json())
@@ -56,10 +58,15 @@ function GetRequests() {
         <tbody>
           {users.map((item, idx) => (
             <tr onClick={(event) => test(event, item.id)} key={idx}>
-              <td>{item.id}</td>
-              <td>{item.name}</td>
-              <td>{item.division}</td>
-              <td>{item.state}</td>
+              <td>{idx}</td>
+              <td>{item.sidingId}</td>
+              <td>{item.frieghtAmount}</td>
+              <td>{item.rakesRequired}</td>
+              <td>{item.requiredOn}</td>
+              <td>{item.placedOn}</td>
+              <td>{item.insertedBy}</td>
+              <td>{item.status}</td>
+              <td>{item.remarks}</td>
             </tr>
           ))}
         </tbody>

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import style from './app.module.css';
 
+
 function RequestForm() {
+  const navigate = useNavigate();
   const [FreightAmount, setAmount] = useState('');
   const [RakesRequired, setCoalAmount] = useState('');
   const [RequiredOn, setDateTime] = useState('');
@@ -30,6 +33,7 @@ function RequestForm() {
       })
       .then((data) => {
         console.log(data);
+         navigate("/")
       })
       .catch((error) => {
         console.error('Fetch error:', error);
